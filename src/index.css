@@ -5,6 +5,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 6.7%;
@@ -99,4 +103,86 @@
   .font-body {
     font-family: 'Inter', sans-serif;
   }
+  .tracking-display {
+    letter-spacing: -0.03em;
+  }
+  .glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/* Hero staggered entry */
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-enter-1 { animation-delay: 0s; }
+.hero-enter-2 { animation-delay: 0.2s; }
+.hero-enter-3 { animation-delay: 0.4s; }
+.hero-enter-4 { animation-delay: 0.6s; }
+
+/* Gentle pulse for floating button */
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.animate-gentle-pulse {
+  animation: gentle-pulse 3s ease-in-out infinite;
+}
+
+/* Image hover effects */
+.img-hover-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.img-hover-wrap img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.img-hover-wrap:hover img {
+  transform: scale(1.03);
+}
+.img-hover-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+  pointer-events: none;
+}
+.img-hover-wrap:hover::after {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+/* Underline grow animation for links */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
