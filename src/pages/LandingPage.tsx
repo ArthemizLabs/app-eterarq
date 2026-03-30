@@ -508,7 +508,6 @@ function Footer() {
         <div>
           <img src={logoEter} alt="Éter Arquitetura e Design" className="h-14 w-auto opacity-80" />
         </div>
-        </div>
         <nav className="flex gap-8">
           {sections.map((s) => (
             <a
