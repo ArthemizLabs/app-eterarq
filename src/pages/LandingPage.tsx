@@ -506,10 +506,8 @@ function Footer() {
     <footer className="py-16 px-8 sm:px-12 border-t border-border">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         <div>
-          <p className="font-display tracking-display text-2xl text-foreground mb-2">Éter</p>
-          <p className="font-body font-light text-sm text-muted-foreground">
-            Arquitetura e Design
-          </p>
+          <img src={logoEter} alt="Éter Arquitetura e Design" className="h-14 w-auto opacity-80" />
+        </div>
         </div>
         <nav className="flex gap-8">
           {sections.map((s) => (
