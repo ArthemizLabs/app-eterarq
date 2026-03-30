@@ -398,6 +398,7 @@ export default function LandingPage() {
       <PromiseSection />
       <ForWhom />
       <Process />
+      <Projects />
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
