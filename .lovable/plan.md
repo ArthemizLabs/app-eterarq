@@ -1,67 +1,47 @@
 
 
-# Visual Polish -- Éter Landing Page Premium
+# Redesign Visual Premium — LP Éter Arquitetura
 
-## Overview
-Complete aesthetic overhaul of `LandingPage.tsx` and `index.css` to achieve Apple-grade visual refinement with sophisticated animations, micro-interactions, and premium feel.
+## Diagnóstico
+A página está funcional mas visualmente genérica: tipografia sem personalidade, layout flat, seções repetitivas sem ritmo visual, falta de elementos decorativos sutis e hierarquia fraca.
 
-## Changes
+## Mudanças Propostas
 
-### 1. Global CSS Enhancements (`src/index.css`)
-- Add `scroll-behavior: smooth` to `html`
-- Add negative letter-spacing utility for display headings (`-0.03em`)
-- Add glass-effect utility class (`backdrop-filter: blur(10px)`)
-- Add custom `@keyframes` for: staggered fade-in, gentle pulse (for floating button), underline grow animation
-- Add hover utilities: `.hover-lift` (translateY -5px), image zoom/darken on hover
-- Increase `translateY` on scroll reveal from `8px` to `40px` as requested
+### 1. Tipografia — Upgrade completo
+- **Títulos**: Trocar Playfair Display por **Cormorant Garamond** (Google Fonts) — mais refinada, elegante, com contraste alto e personalidade de marca de luxo. Pesos 300/400/600.
+- **Corpo**: Manter Inter mas usar peso 300 (light) como padrão — mais airy e sofisticado.
+- **Tamanhos hero**: Aumentar headline para `text-7xl md:text-8xl` com `font-light` (peso 300) — impacto visual dramático.
+- **Adicionar font-feature-settings**: ligatures e old-style figures para refinamento tipográfico.
 
-### 2. Hero Section -- Staggered Entry Animation
-- Each element (brand label, headline, subheadline, button) enters with incremental delay (0, 0.2s, 0.4s, 0.6s) using CSS animation classes
-- Add parallax via `background-attachment: fixed` on hero background image
-- Button: pill shape (`rounded-full` / 50px), premium hover with `-translate-y-0.5` and color shift
+### 2. Hero — Mais cinematográfico
+- Overlay com gradiente diagonal (de preto/60% a transparente) em vez de bege flat — mais profundidade.
+- Headline em branco sobre a imagem escura — contraste dramático.
+- Texto alinhado à esquerda (não centralizado) — mais editorial, menos template.
+- Adicionar uma linha decorativa fina (1px, bege) entre o label e o headline.
+- Brand label com `font-medium tracking-[0.5em]` — mais luxo.
 
-### 3. Cards & Problem Block
-- Hover: `translateY(-5px)` + border transitions to bege
-- Generous padding, thin border (`border-[#eee]`)
-- Staggered reveal with incremental delay per card
+### 3. Layout — Ritmo visual
+- **Seções com full-bleed images**: Adicionar imagens full-width entre seções (como divisores visuais) — quebra a monotonia.
+- **Seção Promessa**: Layout assimétrico — imagem maior (60%) e texto menor (40%).
+- **Seção Processo**: Linha horizontal conectando os 3 passos (timeline visual).
+- **Portfólio**: Grid assimétrico (1 imagem grande + 2 menores ao lado) em vez de grid uniforme.
 
-### 4. Buttons -- Premium Style
-- `rounded-full` (pill shape, ~50px radius)
-- Solid black-to-bege hover transition
-- Subtle elevation on hover (`-translate-y-0.5`)
-- 0.3s transition
+### 4. Elementos decorativos sutis
+- Linhas finas decorativas (1px, cor bege) como separadores entre seções.
+- Números grandes semi-transparentes (opacity 0.05) como background nos cards de processo.
+- Aspas estilizadas (" ") grandes e translúcidas na seção de quebra de crença.
 
-### 5. Images
-- Hover: subtle zoom (`scale-1.03`) + slight darken overlay
-- `loading="lazy"` already present
+### 5. Micro-interações aprimoradas
+- Cards com `border-bottom` de 2px que anima de transparente para bege no hover.
+- Cursor custom `pointer` mais intencional nos elementos interativos.
+- Parallax suave nas imagens de portfólio (translateY baseado em scroll position).
 
-### 6. Floating WhatsApp Button
-- Gentle pulse animation: `scale(1) -> scale(1.05) -> scale(1)` on a slow loop (~3s)
-- Not aggressive
+### 6. Footer — Mais completo
+- Adicionar links de navegação (âncoras para seções).
+- Logo/nome da marca com tipografia estilizada.
+- Layout em 2 colunas.
 
-### 7. Section Backgrounds -- Alternating
-- White / Bege-light / Dark sections for elegant contrast
-- BeliefBreak and ForWhom on `bg-secondary` (bege-light) -- already done
-- FinalCTA on dark (`bg-foreground`) -- already done
-- Process section: keep white
-
-### 8. Scroll Reveal -- Progressive Cascade
-- `translateY(40px)` start (increased from 8px)
-- Duration `0.7s` to `0.9s`
-- Children within each section get incremental delay (stagger effect) using a new `useStaggerReveal` pattern or CSS `transition-delay` on nth-child
-
-### 9. Typography Refinements
-- Headings: `tracking-[-0.03em]` for tighter, premium feel
-- Body: comfortable `leading-[1.7]`
-- Strong visual hierarchy maintained
-
-### 10. Mobile Responsiveness
-- Single column layout on mobile (already handled by grid breakpoints)
-- Ensure buttons are large and accessible
-- Maintain generous spacing on mobile
-
-## Files Modified
-- `src/index.css` -- new utilities, keyframes, scroll-behavior
-- `src/pages/LandingPage.tsx` -- all visual/animation upgrades
-- `tailwind.config.ts` -- add custom animation keyframes if needed
+## Arquivos Modificados
+- `src/index.css` — nova fonte (Cormorant Garamond), utilitários tipográficos, elementos decorativos
+- `src/pages/LandingPage.tsx` — redesign completo de layout, hero, portfólio, processo, footer
 
