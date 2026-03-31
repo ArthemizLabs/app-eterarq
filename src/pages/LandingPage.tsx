@@ -482,7 +482,10 @@ function FloatingWhatsApp() {
       href={WHATSAPP_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-foreground text-secondary shadow-xl animate-gentle-pulse hover:bg-accent hover:text-foreground transition-colors duration-300"
+      id="cta-float-whatsapp"
+      data-gtm-event="cta_float_click"
+      data-gtm-label="Float WhatsApp"
+      className="gtm-cta gtm-cta-float fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-foreground text-secondary shadow-xl animate-gentle-pulse hover:bg-accent hover:text-foreground transition-colors duration-300"
       aria-label="Falar no WhatsApp"
     >
       <MessageCircle className="w-6 h-6" />
