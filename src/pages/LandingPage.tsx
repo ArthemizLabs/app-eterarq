@@ -227,14 +227,22 @@ function PromiseSection() {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <div className="img-hover-wrap rounded-2xl">
-              <img
+            <ImageComparison className="w-full h-[400px] sm:h-[520px] rounded-2xl" enableHover>
+              <ImageComparisonImage
                 src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
-                alt="Escritório corporativo sofisticado com iluminação indireta"
-                className="w-full h-[400px] sm:h-[520px] object-cover rounded-2xl"
-                loading="lazy"
+                alt="Escritório antes"
+                position="left"
+                className="grayscale"
               />
-            </div>
+              <ImageComparisonImage
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
+                alt="Escritório depois"
+                position="right"
+              />
+              <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
+                <div className="absolute top-1/2 left-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
+              </ImageComparisonSlider>
+            </ImageComparison>
           </div>
           {/* Text — 40% (2 cols) */}
           <div
