@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-react";
 import { StackedCardsInteraction } from "@/components/ui/stacked-cards-interaction";
+import { HeroSection } from "@/components/ui/hero-section-2";
+import { MessageCircle } from "lucide-react";
 import logoEter from "@/assets/logo-eter.png";
 
 const WHATSAPP_URL =
