@@ -190,7 +190,7 @@ function BeliefBreak() {
         </p>
         <p className="font-body font-light text-muted-foreground text-base sm:text-lg leading-[1.8]">
           Iluminação, materiais, proporções, fluxo — tudo comunica. E quando
-          comunica certo, <em className="font-display italic text-foreground">vende</em>.
+          comunica certo, <em className="font-detail text-foreground">vende</em>.
         </p>
       </div>
     </RevealSection>
