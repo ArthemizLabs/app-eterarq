@@ -2,8 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { X } from "lucide-react";
+import { useState, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Card = ({
   className,
