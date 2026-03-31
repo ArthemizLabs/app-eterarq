@@ -26,7 +26,7 @@ const InfoIcon = ({ type }: { type: 'website' | 'phone' | 'address' }) => {
   return <span className="text-muted-foreground">{icons[type]}</span>;
 };
 
-interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
+interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   logo?: {
     url: string;
     alt: string;
