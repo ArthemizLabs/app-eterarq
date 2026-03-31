@@ -91,14 +91,14 @@ function Hero() {
       <div className="relative z-10 max-w-6xl mx-auto px-8 sm:px-12 pb-24 sm:pb-32 pt-40 w-full">
         <img src={logoEter} alt="Éter Arquitetura e Design" className="hero-enter hero-enter-1 h-16 sm:h-20 w-auto mb-6 opacity-90" />
         <div className="deco-line hero-enter hero-enter-1 mb-8 opacity-60" />
-        <h1 className="hero-enter hero-enter-2 font-display tracking-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[1.02] text-white mb-8 max-w-4xl">
+        <h1 className="hero-enter hero-enter-2 font-display tracking-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[1.02] text-white mb-8 max-w-4xl [text-shadow:_0_2px_30px_rgba(0,0,0,0.5)]">
           Seu escritório está
           <br />
           <em className="italic font-light">posicionando</em> ou
           <br />
           afastando clientes?
         </h1>
-        <p className="hero-enter hero-enter-3 font-body font-light text-base sm:text-lg text-white/70 max-w-xl mb-14 leading-[1.8]">
+        <p className="hero-enter hero-enter-3 font-body font-light text-base sm:text-lg text-white/70 max-w-xl mb-14 leading-[1.8] [text-shadow:_0_1px_20px_rgba(0,0,0,0.4)]">
           Projetamos espaços corporativos que aumentam percepção de valor,
           confiança e fechamento de contratos.
         </p>
