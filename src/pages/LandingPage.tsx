@@ -3,6 +3,8 @@ import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-reac
 import { StackedCardsInteraction } from "@/components/ui/stacked-cards-interaction";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import logoEter from "@/assets/logo-eter.png";
+import clinica1 from "@/assets/clinica-1.jpg";
+import clinica2 from "@/assets/clinica-2.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/55XXXXXXXXXXX?text=Quero%20uma%20an%C3%A1lise%20do%20meu%20escrit%C3%B3rio";
