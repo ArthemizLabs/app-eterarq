@@ -77,7 +77,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
     return (
       <div
         ref={ref}
-        className={cn("relative min-h-screen flex flex-col lg:flex-row overflow-hidden bg-background", className)}
+        className={cn("relative min-h-[auto] lg:min-h-screen flex flex-col lg:flex-row overflow-hidden bg-background", className)}
         {...props}
       >
         {/* Left Side: Content */}
@@ -104,7 +104,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <div className="flex flex-col gap-8">
               <motion.h1
                 variants={itemVariants}
-                className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.08] text-foreground"
+                className="font-display tracking-display text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.08] text-foreground"
               >
                 {title}
               </motion.h1>
@@ -113,7 +113,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 
               <motion.p
                 variants={itemVariants}
-                className="font-body font-light text-base sm:text-lg text-muted-foreground max-w-lg leading-[1.8]"
+                className="font-body font-light text-sm sm:text-lg text-muted-foreground max-w-lg leading-[1.8]"
               >
                 {subtitle}
               </motion.p>
