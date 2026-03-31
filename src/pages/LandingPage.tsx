@@ -428,7 +428,7 @@ function Projects() {
       ],
     },
     {
-      label: "Saúde & Bem-estar",
+      label: "Lojas",
       cards: [
         {
           image: "https://images.unsplash.com/photo-1572025442646-866d16c84a54?auto=format&fit=crop&w=1200&q=80",
