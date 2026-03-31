@@ -231,13 +231,13 @@ function PromiseSection() {
           >
             <ImageComparison className="w-full h-[400px] sm:h-[520px] rounded-2xl" enableHover>
               <ImageComparisonImage
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
-                alt="Escritório antes"
+                src={depoisObra}
+                alt="Resultado final"
                 position="left"
               />
               <ImageComparisonImage
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
-                alt="Escritório depois"
+                src={antesObra}
+                alt="Obra em andamento"
                 position="right"
                 className="grayscale"
               />
