@@ -4,6 +4,7 @@ import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-reac
 import { PortfolioCarousel } from "@/components/ui/portfolio-carousel";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import logoEter from "@/assets/logo-eter.png";
+import antesImg from "@/assets/antes.jpg";
 import clinica1 from "@/assets/clinica-1.jpg";
 import clinica2 from "@/assets/clinica-2.jpg";
 import clinica3 from "@/assets/clinica-3.jpg";
@@ -146,7 +147,7 @@ function ProblemBlock() {
         >
           <ImageComparison className="aspect-[16/9] w-full rounded-2xl shadow-xl" enableHover>
             <ImageComparisonImage
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+              src={antesImg}
               className="grayscale"
               alt="Antes — espaço genérico"
               position="right"
