@@ -1,26 +1,44 @@
 
 
-## Plan: Add partner photo above FinalCTA with bottom-to-top gradient fade
+## Plan: Add GTM-friendly classes and data attributes to all CTA buttons
 
-### What
-Place the uploaded photo of the two partners (`IMG_7914-removebg-preview.png`) above the FinalCTA section, with a gradient that goes from transparent at the bottom to opaque at the top — creating a blend effect where the image fades into the dark brown CTA background below.
+### Summary
+Add unique `id`, `class`, and `data-gtm-*` attributes to all WhatsApp CTA buttons so you can easily set up click triggers in Google Tag Manager.
 
-### Steps
+### Buttons identified (3 total)
 
-1. **Copy image** to `src/assets/socias.png`
+| Button | Location | Proposed ID | GTM Event |
+|--------|----------|-------------|-----------|
+| Hero CTA | Top of page | `cta-hero-whatsapp` | `cta_hero_click` |
+| Final CTA | Section with partner photo | `cta-final-whatsapp` | `cta_final_click` |
+| Floating button | Bottom-right corner | `cta-float-whatsapp` | `cta_float_click` |
 
-2. **Add a new section between Projects and FinalCTA** in `LandingPage.tsx`:
-   - Container with `bg-foreground` (same brown as FinalCTA) and `relative overflow-hidden`
-   - The partner image centered, with a CSS gradient overlay (`mask-image` or a `div` with `bg-gradient-to-t from-foreground to-transparent`) covering the bottom portion
-   - This creates the effect of the image emerging from transparent at the bottom and becoming fully visible at the top
-   - Remove padding-top from FinalCTA to make the sections feel seamless
+### Changes
 
-3. **Implementation detail**:
-   - Use `mask-image: linear-gradient(to top, transparent, black 60%)` on the image for a clean fade effect
-   - Or overlay a `div` with `bg-gradient-to-t from-[hsl(var(--foreground))] to-transparent` on top of the image
-   - Image should be centered, reasonable max-width (~400-500px)
+**1. `src/components/ui/hero-section-2.tsx`** — Add `id`, `className`, and `data-gtm` to the hero CTA `<a>` tag:
+- `id="cta-hero-whatsapp"`
+- `className` adds `gtm-cta gtm-cta-hero`
+- `data-gtm-event="cta_hero_click"`
+- `data-gtm-label="Hero WhatsApp"`
 
-### Files changed
-- `src/assets/socias.png` (new)
-- `src/pages/LandingPage.tsx` (add partner image section before FinalCTA)
+**2. `src/pages/LandingPage.tsx`** — Two buttons:
+
+**Final CTA button:**
+- `id="cta-final-whatsapp"`
+- Add classes `gtm-cta gtm-cta-final`
+- `data-gtm-event="cta_final_click"`
+- `data-gtm-label="Final CTA WhatsApp"`
+
+**Floating WhatsApp button:**
+- `id="cta-float-whatsapp"`
+- Add classes `gtm-cta gtm-cta-float`
+- `data-gtm-event="cta_float_click"`
+- `data-gtm-label="Float WhatsApp"`
+
+### GTM Setup Guide
+After implementation, in GTM you can create a single trigger:
+- **Trigger type**: Click — All Elements
+- **Condition**: `Click Classes` contains `gtm-cta`
+- Use the `data-gtm-event` attribute as the Event Name in your GA4/Google Ads tag
+- Use `data-gtm-label` to distinguish which button was clicked
 
