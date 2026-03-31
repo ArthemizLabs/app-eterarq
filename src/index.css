@@ -101,11 +101,14 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Cormorant Garamond', serif;
-    font-feature-settings: "liga" 1, "onum" 1;
+    font-family: 'Poppins', sans-serif;
   }
   .font-body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-detail {
+    font-family: 'Lora', serif;
+    font-style: italic;
   }
   .tracking-display {
     letter-spacing: -0.03em;
