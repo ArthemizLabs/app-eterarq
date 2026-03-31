@@ -444,7 +444,10 @@ function FinalCTA() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-[#5c4939] text-[#e5eaed] font-body font-medium text-sm px-10 py-4 rounded-full hover:opacity-90 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-2xl"
+          id="cta-final-whatsapp"
+          data-gtm-event="cta_final_click"
+          data-gtm-label="Final CTA WhatsApp"
+          className="gtm-cta gtm-cta-final inline-flex items-center gap-3 bg-[#5c4939] text-[#e5eaed] font-body font-medium text-sm px-10 py-4 rounded-full hover:opacity-90 transition-all duration-500 hover:-translate-y-0.5 hover:shadow-2xl"
         >
           <MessageCircle className="w-5 h-5" />
           Quero minha análise no WhatsApp
