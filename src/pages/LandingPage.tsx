@@ -147,7 +147,7 @@ function ProblemBlock() {
             <ImageComparison className="aspect-[3/4] w-full rounded-2xl shadow-xl" enableHover>
               <ImageComparisonImage
                 src={antesImg}
-                className="grayscale"
+                alt="Antes — espaço genérico"
                 alt="Antes — espaço genérico"
                 position="right"
               />
