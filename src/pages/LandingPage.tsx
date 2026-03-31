@@ -4,6 +4,7 @@ import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-reac
 import { PortfolioCarousel } from "@/components/ui/portfolio-carousel";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import logoEter from "@/assets/logo-eter.png";
+import logoEterFooter from "@/assets/logo-eter-footer.png";
 import antesImg from "@/assets/antes.jpg";
 import depoisImg from "@/assets/depois.jpg";
 import clinica1 from "@/assets/clinica-1.jpg";
