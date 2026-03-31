@@ -98,7 +98,7 @@ function Hero() {
           <br />
           afastando clientes?
         </h1>
-        <p className="hero-enter hero-enter-3 font-body font-light text-base sm:text-lg text-white/70 max-w-xl mb-14 leading-[1.8]">
+        <p className="hero-enter hero-enter-3 font-body font-light text-base sm:text-lg text-white/70 max-w-xl mb-14 leading-[1.8] [text-shadow:_0_1px_20px_rgba(0,0,0,0.4)]">
           Projetamos espaços corporativos que aumentam percepção de valor,
           confiança e fechamento de contratos.
         </p>
