@@ -85,7 +85,7 @@ function Hero() {
         url: logoEter,
         alt: "Éter Arquitetura e Design",
       }}
-      slogan="Arquitetura estratégica"
+      slogan=""
       title={
         <>
           Seu escritório está
