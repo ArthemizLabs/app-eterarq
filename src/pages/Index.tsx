@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import logoEterFooter from "@/assets/logo-eter-footer.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import sociasImg from "@/assets/socias.png";
+import sociasAboutImg from "@/assets/socias-about.jpeg";
 import antesObra from "@/assets/antes-obra.jpg";
 import depoisObra from "@/assets/depois-obra.jpg";
 import clinica1 from "@/assets/clinica-1.jpg";
@@ -183,13 +184,9 @@ function About() {
           <div className={`transition-all duration-[1000ms] ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <div className="relative">
               <img
-                src={sociasImg}
+                src={sociasAboutImg}
                 alt="Sócias — Éter Arquitetura e Design"
-                className="w-full max-w-[420px] mx-auto h-auto"
-                style={{
-                  maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-                }}
+                className="w-full max-w-[420px] mx-auto h-auto rounded-lg object-cover"
               />
             </div>
           </div>
