@@ -409,16 +409,17 @@ function Projects() {
   );
 }
 
-/* ─── SÓCIAS ─── */
-function PartnersPhoto() {
+/* ─── CTA FINAL (com foto das sócias atrás) ─── */
+function FinalCTA() {
   return (
-    <section className="bg-foreground relative overflow-hidden pt-8 sm:pt-16 -mb-32 sm:-mb-40 z-10">
-      <div className="flex justify-center">
-        <div className="relative max-w-[320px] sm:max-w-[360px] w-full">
+    <RevealSection className="relative overflow-hidden pt-8 sm:pt-16 pb-32 sm:pb-40 px-8 sm:px-12" bg="bg-foreground">
+      {/* Foto das sócias — atrás do texto */}
+      <div className="flex justify-center mb-0 relative z-0">
+        <div className="max-w-[320px] sm:max-w-[360px] w-full">
           <img
             src={sociasImg}
             alt="Sócias — Éter Arquitetura e Design"
-            className="w-full h-auto relative z-10"
+            className="w-full h-auto"
             style={{
               maskImage: "linear-gradient(to bottom, black 30%, transparent 95%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
               WebkitMaskImage: "linear-gradient(to bottom, black 30%, transparent 95%), linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
@@ -428,15 +429,8 @@ function PartnersPhoto() {
           />
         </div>
       </div>
-    </section>
-  );
-}
-
-/* ─── CTA FINAL ─── */
-function FinalCTA() {
-  return (
-    <RevealSection className="pt-16 sm:pt-20 pb-32 sm:pb-40 px-8 sm:px-12 relative z-20" bg="bg-foreground">
-      <div className="max-w-3xl mx-auto text-center relative z-20">
+      {/* Texto sobreposto — na frente */}
+      <div className="max-w-3xl mx-auto text-center relative z-10 -mt-24 sm:-mt-32">
         <div className="deco-line mx-auto mb-10 bg-accent/40" />
         <h2 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl text-secondary mb-8 leading-[1.1]">
           Se o seu escritório não impressiona, ele negocia seu preço por você.
@@ -503,7 +497,6 @@ export default function LandingPage() {
       
       <Process />
       <Projects />
-      <PartnersPhoto />
       <FinalCTA />
       <Footer />
       <FloatingWhatsApp />
