@@ -143,7 +143,7 @@ function ProblemBlock() {
           }`}
           style={{ transitionDelay: visible ? "300ms" : "0ms" }}
         >
-          <ImageComparison className="aspect-[16/9] w-full rounded-2xl shadow-xl" enableHover>
+          <ImageComparison className="aspect-[3/4] sm:aspect-[4/5] md:aspect-[3/4] w-full max-w-3xl mx-auto rounded-2xl shadow-xl" enableHover>
             <ImageComparisonImage
               src={antesImg}
               className="grayscale"
