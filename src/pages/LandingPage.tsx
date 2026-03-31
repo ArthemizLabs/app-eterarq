@@ -7,6 +7,10 @@ import clinica1 from "@/assets/clinica-1.jpg";
 import clinica2 from "@/assets/clinica-2.jpg";
 import clinica3 from "@/assets/clinica-3.jpg";
 import clinica4 from "@/assets/clinica-4.jpg";
+import loja1 from "@/assets/loja-1.jpg";
+import loja2 from "@/assets/loja-2.jpg";
+import loja3 from "@/assets/loja-3.jpg";
+import loja4 from "@/assets/loja-4.jpg";
 
 const WHATSAPP_URL =
   "https://wa.me/55XXXXXXXXXXX?text=Quero%20uma%20an%C3%A1lise%20do%20meu%20escrit%C3%B3rio";
