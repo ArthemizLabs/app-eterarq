@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-react";
-import { StackedCardsInteraction } from "@/components/ui/stacked-cards-interaction";
+import { PortfolioCarousel } from "@/components/ui/portfolio-carousel";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import logoEter from "@/assets/logo-eter.png";
 import clinica1 from "@/assets/clinica-1.jpg";
