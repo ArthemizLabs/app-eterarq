@@ -147,14 +147,14 @@ function ProblemBlock() {
           <ImageComparison className="aspect-[16/9] w-full rounded-2xl shadow-xl" enableHover>
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
-              className="grayscale brightness-75"
+              className="grayscale"
               alt="Antes — espaço genérico"
-              position="left"
+              position="right"
             />
             <ImageComparisonImage
               src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
               alt="Depois — espaço transformado"
-              position="right"
+              position="left"
             />
             <ImageComparisonSlider className="w-0.5 bg-white/40 backdrop-blur-sm">
               <div className="absolute top-1/2 left-1/2 w-5 h-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
