@@ -143,25 +143,27 @@ function ProblemBlock() {
           }`}
           style={{ transitionDelay: visible ? "300ms" : "0ms" }}
         >
-          <ImageComparison className="aspect-[3/4] w-full max-w-lg mx-auto rounded-2xl shadow-xl" enableHover>
-            <ImageComparisonImage
-              src={antesImg}
-              className="grayscale"
-              alt="Antes — espaço genérico"
-              position="right"
-            />
-            <ImageComparisonImage
-              src={depoisImg}
-              alt="Depois — espaço transformado"
-              position="left"
-            />
-            <ImageComparisonSlider className="w-0.5 bg-white/40 backdrop-blur-sm">
-              <div className="absolute top-1/2 left-1/2 w-5 h-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
-            </ImageComparisonSlider>
-          </ImageComparison>
-          <div className="flex justify-between mt-6">
-            <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground">Antes</p>
-            <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground">Depois</p>
+          <div className="max-w-lg mx-auto">
+            <ImageComparison className="aspect-[3/4] w-full rounded-2xl shadow-xl" enableHover>
+              <ImageComparisonImage
+                src={antesImg}
+                className="grayscale"
+                alt="Antes — espaço genérico"
+                position="right"
+              />
+              <ImageComparisonImage
+                src={depoisImg}
+                alt="Depois — espaço transformado"
+                position="left"
+              />
+              <ImageComparisonSlider className="w-0.5 bg-white/40 backdrop-blur-sm">
+                <div className="absolute top-1/2 left-1/2 w-5 h-5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
+              </ImageComparisonSlider>
+            </ImageComparison>
+            <div className="flex justify-between mt-6">
+              <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground">Antes</p>
+              <p className="font-body text-[11px] tracking-[0.3em] uppercase text-muted-foreground">Depois</p>
+            </div>
           </div>
         </div>
       </div>
