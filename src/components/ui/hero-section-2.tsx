@@ -113,7 +113,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
 
               <motion.p
                 variants={itemVariants}
-                className="font-body font-light text-base sm:text-lg text-muted-foreground max-w-lg leading-[1.8]"
+                className="font-body font-light text-sm sm:text-lg text-muted-foreground max-w-lg leading-[1.8]"
               >
                 {subtitle}
               </motion.p>
