@@ -18,6 +18,8 @@ import clinica4 from "@/assets/clinica-4.jpg";
 import loja1 from "@/assets/loja-1.jpg";
 import loja2 from "@/assets/loja-2.jpg";
 import loja3 from "@/assets/loja-3.jpg";
+import salus1 from "@/assets/salus-1.jpg";
+import salus2 from "@/assets/salus-2.jpg";
 import loja4 from "@/assets/loja-4.jpg";
 
 const WHATSAPP_URL =
