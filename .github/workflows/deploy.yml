@@ -1,0 +1,88 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      artifact_path:
+        description: "Caminho do diretório ou artefato a publicar."
+        required: false
+        default: "dist"
+        type: string
+      build_command:
+        description: "Comando de build opcional antes do deploy (ex.: npm run build)."
+        required: false
+        default: "bun run build"
+        type: string
+      build_workdir:
+        description: "Diretório onde o comando de build será executado."
+        required: false
+        default: "."
+        type: string
+  workflow_call:
+    inputs:
+      artifact_path:
+        description: "Caminho do diretório ou artefato a publicar."
+        required: false
+        default: "dist"
+        type: string
+      build_command:
+        description: "Comando de build opcional antes do deploy (ex.: npm run build)."
+        required: false
+        default: "bun run build"
+        type: string
+      build_workdir:
+        description: "Diretório onde o comando de build será executado."
+        required: false
+        default: "."
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    env:
+      GITHUB_PAGES: "true"
+      ARTIFACT_PATH: ${{ inputs.artifact_path || 'dist' }}
+      BUILD_COMMAND: ${{ inputs.build_command || 'bun run build' }}
+      BUILD_WORKDIR: ${{ inputs.build_workdir || '.' }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ env.BUILD_WORKDIR }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build (opcional)
+        if: env.BUILD_COMMAND != ''
+        run: ${{ env.BUILD_COMMAND }}
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_WORKDIR }}/${{ env.ARTIFACT_PATH }}
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
