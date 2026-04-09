@@ -353,12 +353,6 @@ function Projects() {
     {
       title: "Numer+Pétalla",
       category: "Lojas",
-      description: "Exposição inteligente com araras metálicas e layout aberto, maximizando a experiência de compra.",
-      src: loja1,
-    },
-    {
-      title: "Numer+Pétalla",
-      category: "Lojas",
       description: "Identidade visual integrada ao espaço com parede destaque em terracota e prateleiras de exposição.",
       src: loja2,
     },
