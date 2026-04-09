@@ -13,7 +13,7 @@ import antesObra from "@/assets/antes-obra.jpg";
 import depoisObra from "@/assets/depois-obra.jpg";
 import clinica1 from "@/assets/clinica-1.jpg";
 import clinica2 from "@/assets/clinica-2.jpg";
-import clinica3 from "@/assets/clinica-3.jpg";
+
 import clinica4 from "@/assets/clinica-4.jpg";
 import loja1 from "@/assets/loja-1.jpg";
 import loja2 from "@/assets/loja-2.jpg";
@@ -349,7 +349,7 @@ function Portfolio() {
   const portfolioItems = [
     { title: "Consultório Médico", category: "Clínicas", description: "Marcenaria sob medida com iluminação indireta, criando um ambiente acolhedor e profissional.", src: clinica1 },
     { title: "Consultório Médico", category: "Clínicas", description: "Design funcional e elegante com materiais nobres, transmitindo confiança e sofisticação.", src: clinica2 },
-    { title: "Recepção Clínica", category: "Clínicas", description: "Espaço de espera projetado para conforto e bem-estar, com mobiliário contemporâneo.", src: clinica3 },
+    
     { title: "Sala de Atendimento", category: "Clínicas", description: "Ambiente de trabalho com mesa em mármore verde e estante em madeira.", src: clinica4 },
     { title: "Numer+Pétalla", category: "Lojas", description: "Exposição inteligente com araras metálicas e layout aberto.", src: loja1 },
     { title: "Numer+Pétalla", category: "Lojas", description: "Identidade visual integrada ao espaço com parede destaque em terracota.", src: loja2 },
