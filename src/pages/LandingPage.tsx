@@ -232,57 +232,56 @@ function PromiseSection() {
   return (
     <section ref={ref} className="py-28 sm:py-36 px-8 sm:px-12">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-5 gap-12 md:gap-16 items-center">
-          {/* Image — 60% (3 cols) */}
-          <div
-            className={`md:col-span-3 transition-all duration-[1000ms] ease-out ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            <ImageComparison className="w-full h-[400px] sm:h-[520px] rounded-2xl" enableHover>
-              <ImageComparisonImage
-                src={depoisObra}
-                alt="Resultado final"
-                position="left"
-              />
-              <ImageComparisonImage
-                src={antesObra}
-                alt="Obra em andamento"
-                position="right"
-                className="grayscale"
-              />
-              <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
-                <div className="absolute top-1/2 left-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
-              </ImageComparisonSlider>
-            </ImageComparison>
-          </div>
-          {/* Text — 40% (2 cols) */}
-          <div
-            className={`md:col-span-2 transition-all duration-[900ms] ease-out ${
-              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-            style={{ transitionDelay: visible ? "200ms" : "0ms" }}
-          >
-            <div className="deco-line mb-8" />
-            <h2 className="font-display tracking-display text-3xl sm:text-4xl text-foreground mb-10 leading-[1.1]">
-              Por que investir em uma projeto com a Éter?
-            </h2>
-            <ul className="space-y-5">
-              {benefits.map((b, i) => (
-                <li
-                  key={b}
-                  className={`flex items-start gap-3 transition-all duration-[600ms] ease-out ${
-                    visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
-                  }`}
-                  style={{ transitionDelay: visible ? `${400 + i * 100}ms` : "0ms" }}
-                >
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
-                  <span className="font-body font-light text-muted-foreground leading-[1.8]">{b}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Image centered */}
+        <div
+          className={`max-w-[800px] mx-auto mb-16 transition-all duration-[1000ms] ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <ImageComparison className="w-full h-[400px] sm:h-[520px] rounded-2xl" enableHover>
+            <ImageComparisonImage
+              src={depoisObra}
+              alt="Resultado final"
+              position="left"
+            />
+            <ImageComparisonImage
+              src={antesObra}
+              alt="Obra em andamento"
+              position="right"
+              className="grayscale"
+            />
+            <ImageComparisonSlider className="w-0.5 bg-white/30 backdrop-blur-sm">
+              <div className="absolute top-1/2 left-1/2 size-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-lg" />
+            </ImageComparisonSlider>
+          </ImageComparison>
         </div>
+        {/* Title centered */}
+        <div
+          className={`text-center mb-14 transition-all duration-[900ms] ease-out ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+          style={{ transitionDelay: visible ? "200ms" : "0ms" }}
+        >
+          <div className="deco-line mx-auto mb-8" />
+          <h2 className="font-display tracking-display text-3xl sm:text-4xl text-foreground leading-[1.1]">
+            Por que investir em uma projeto com a Éter?
+          </h2>
+        </div>
+        {/* Bullet points in 2 columns */}
+        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-5 max-w-4xl mx-auto">
+          {benefits.map((b, i) => (
+            <li
+              key={b}
+              className={`flex items-start gap-3 transition-all duration-[600ms] ease-out ${
+                visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+              }`}
+              style={{ transitionDelay: visible ? `${400 + i * 100}ms` : "0ms" }}
+            >
+              <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+              <span className="font-body font-light text-muted-foreground leading-[1.8]">{b}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
