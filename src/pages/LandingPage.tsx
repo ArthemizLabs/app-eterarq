@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ImageComparison, ImageComparisonImage, ImageComparisonSlider } from "@/components/ui/image-comparison";
 import { MessageCircle, ArrowRight, Target, Lightbulb, Ruler } from "lucide-react";
-import { PortfolioCarousel } from "@/components/ui/portfolio-carousel";
+import { PortfolioGrid } from "@/components/ui/portfolio-grid";
 import { HeroSection } from "@/components/ui/hero-section-2";
 import logoEter from "@/assets/logo-eter.png";
 import heroBg from "@/assets/hero-bg.jpg";
