@@ -131,10 +131,10 @@ function Hero() {
 function ProblemBlock() {
   const { ref, visible } = useScrollReveal();
   const pains = [
-    { title: "Falta de autoridade", desc: "O cliente não sente confiança ao entrar. O espaço não reflete sua competência." },
-    { title: "Ambiente genérico", desc: "Sem identidade, sem diferencial. Igual a qualquer outro escritório da região." },
-    { title: "Não transmite valor", desc: "O ambiente desvaloriza seu serviço e o cliente já entra negociando preço." },
-    { title: "Não converte clientes", desc: "Você perde negócios sem entender por quê. O espaço sabota a decisão." },
+    { title: "Não comunica autoridade", desc: "O ambiente falha em comunicar a solidez e a competência que você realmente possui." },
+    { title: "Espaço genérico", desc: "Sem personalidade, a falta de identidade torna seu ambiente  indistinguível de qualquer outro do mesmo segmento." },
+    { title: "A percepção de valor", desc: "O próprio ambiente reduz a relevância do seu serviço, conduzindo o cliente a uma postura imediata de desvalorização." },
+    { title: "A conversão não acontece", desc: "Negócios se perdem de forma silenciosa, enquanto o espaço inviabiliza a tomada de decisão." },
   ];
 
   return (
@@ -146,7 +146,7 @@ function ProblemBlock() {
           }`}
         >
           <h2 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl text-center text-foreground mb-20 max-w-3xl mx-auto leading-[1.1]">
-            Seu espaço pode estar custando clientes — e você nem percebe.
+            A falta de coerência e conexão no seu espaço pode existir — e você nem percebe.
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 gap-x-16 gap-y-0">
@@ -257,7 +257,7 @@ function PromiseSection() {
           >
             <div className="deco-line mb-8" />
             <h2 className="font-display tracking-display text-3xl sm:text-4xl text-foreground mb-10 leading-[1.1]">
-              Seu escritório pode vender antes mesmo de você falar.
+              Por que investir em uma projeto com a Éter?
             </h2>
             <ul className="space-y-5">
               {benefits.map((b, i) => (
