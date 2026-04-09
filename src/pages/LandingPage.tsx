@@ -12,7 +12,7 @@ import antesObra from "@/assets/antes-obra.jpg";
 import depoisObra from "@/assets/depois-obra.jpg";
 import clinica1 from "@/assets/clinica-1.jpg";
 import clinica2 from "@/assets/clinica-2.jpg";
-import clinica3 from "@/assets/clinica-3.jpg";
+
 import clinica4 from "@/assets/clinica-4.jpg";
 import loja1 from "@/assets/loja-1.jpg";
 import loja2 from "@/assets/loja-2.jpg";
@@ -343,12 +343,6 @@ function Projects() {
       category: "Clínicas",
       description: "Design funcional e elegante com materiais nobres, transmitindo confiança e sofisticação aos pacientes.",
       src: clinica2,
-    },
-    {
-      title: "Recepção Clínica",
-      category: "Clínicas",
-      description: "Espaço de espera projetado para conforto e bem-estar, com mobiliário contemporâneo e arte decorativa.",
-      src: clinica3,
     },
     {
       title: "Sala de Atendimento",
