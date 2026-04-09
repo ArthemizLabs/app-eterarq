@@ -119,6 +119,7 @@ function Hero() {
         icon: <MessageCircle className="w-5 h-5" />,
       }}
       backgroundImage={heroBg}
+      backgroundTexture={fundoBg}
       contactInfo={{
         website: "",
         phone: "",
