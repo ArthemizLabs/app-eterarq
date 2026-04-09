@@ -376,7 +376,7 @@ function Projects() {
   ];
 
   return (
-    <section ref={ref} className="py-28 sm:py-36 px-8 sm:px-12 bg-secondary">
+    <section ref={ref} className="py-28 sm:py-36 px-8 sm:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <div
           className={`transition-all duration-[900ms] ease-out text-center mb-20 ${
