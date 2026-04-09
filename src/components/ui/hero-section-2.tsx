@@ -41,6 +41,7 @@ interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 't
     icon?: React.ReactNode;
   };
   backgroundImage: string;
+  backgroundTexture?: string;
   contactInfo: {
     website: string;
     phone: string;
@@ -49,7 +50,7 @@ interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 't
 }
 
 const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
-  ({ className, logo, slogan, title, subtitle, callToAction, backgroundImage, contactInfo, ...props }, ref) => {
+  ({ className, logo, slogan, title, subtitle, callToAction, backgroundImage, backgroundTexture, contactInfo, ...props }, ref) => {
 
     const containerVariants = {
       hidden: { opacity: 0 },
@@ -92,6 +93,10 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
           initial="hidden"
           animate="visible"
         >
+          {/* Background texture for left panel */}
+          {backgroundTexture && (
+            <img src={backgroundTexture} alt="" className="absolute inset-0 w-full h-full object-cover z-0" />
+          )}
           {/* Top Section: Logo & Main Content */}
           <div className="flex flex-col gap-12 lg:gap-16">
             <motion.div variants={itemVariants}>
