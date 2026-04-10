@@ -199,12 +199,12 @@ function BeliefBreak() {
         {/* Decorative quote */}
         <span className="absolute -top-8 left-1/2 -translate-x-1/2 font-display text-[160px] leading-none text-accent/[0.08] select-none pointer-events-none">"</span>
         <h2 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-10 leading-[1.1] relative z-10">
-          Não é sobre decoração.
+          Não é somente sobre beleza.
         </h2>
         <p className="font-body font-light text-muted-foreground text-base sm:text-lg leading-[1.8] mb-6">
-          Arquitetura estratégica não é escolher móveis bonitos. É projetar cada
-          detalhe do seu espaço para influenciar como o cliente percebe, sente e
-          decide.
+          Design estratégico vai além de um ambiente bonito. 
+          <br />
+          É projetar e cuidar para que cada detalhe possa influenciar a percepção e a decisão do seu cliente.
         </p>
         <p className="font-body font-light text-muted-foreground text-base sm:text-lg leading-[1.8]">
           Iluminação, materialidade, proporção, fluxo e harmonia – tudo comunica.
