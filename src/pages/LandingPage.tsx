@@ -372,7 +372,7 @@ function Projects() {
     { title: "Sala de Atendimento", image: clinica4 },
     { title: "Laboratório Salus", image: salus3 },
     { title: "Laboratório Salus", image: salus4 },
-    { title: "Numer+Pétalla", image: loja4 },
+    
   ];
 
   return (
