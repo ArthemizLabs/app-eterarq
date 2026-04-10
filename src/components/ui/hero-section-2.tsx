@@ -115,6 +115,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               <motion.h1
                 variants={itemVariants}
                 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-[1.08] text-[#eae6dd]"
+                style={{ textShadow: "0 2px 16px rgba(0,0,0,0.35)" }}
               >
                 {title}
               </motion.h1>
@@ -124,6 +125,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               <motion.p
                 variants={itemVariants}
                 className="font-body font-light text-sm sm:text-lg text-[#eae6dd] max-w-lg leading-[1.8]"
+                style={{ textShadow: "0 1px 12px rgba(0,0,0,0.3)" }}
               >
                 {subtitle}
               </motion.p>
