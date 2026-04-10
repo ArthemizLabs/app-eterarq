@@ -205,8 +205,9 @@ function BeliefBreak() {
           <span><em className="font-detail">Design estratégico</em> vai além de um ambiente bonito. É projetar e cuidar para que cada detalhe possa influenciar a <em className="font-detail">percepção</em> e a <em className="font-detail">decisão</em> do seu cliente.</span>
         </p>
         <p className="font-body font-light text-muted-foreground text-base sm:text-lg leading-[1.8]">
-          Iluminação, materialidade, proporção, fluxo e harmonia – <em className="font-detail">tudo comunica</em>.
-          <br />E quando comunica de forma assertiva, gera <em className="font-detail">conexão</em> e <em className="font-detail">valor</em>.
+          <span>Iluminação, materialidade, proporção, fluxo e harmonia – <em className="font-detail">tudo comunica</em>.</span>
+          <br />
+          <span>E quando comunica de forma assertiva, gera <em className="font-detail">conexão</em> e <em className="font-detail">valor</em>.</span>
         </p>
       </div>
     </RevealSection>
