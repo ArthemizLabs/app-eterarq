@@ -26,7 +26,7 @@ const PortfolioGrid = ({ items }: { items: PortfolioGridItem[] }) => {
         {items.map((item, index) => (
           <div
             key={index}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
+            className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group w-full sm:w-[calc(50%-6px)] lg:w-[calc(33.333%-8px)]"
             onClick={() => setLightboxIdx(index)}
           >
             <img
