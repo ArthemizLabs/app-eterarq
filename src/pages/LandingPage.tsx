@@ -19,6 +19,7 @@ import clinica4 from "@/assets/clinica-4.jpg";
 import salus3 from "@/assets/salus-3.jpg";
 import salus4 from "@/assets/salus-4.jpg";
 import loja4 from "@/assets/loja-4.jpg";
+import clinicaVinuz from "@/assets/clinica-vinuz.jpg";
 import sociasImg from "@/assets/socias.jpg";
 
 const WHATSAPP_URL =
