@@ -98,7 +98,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             <img src={backgroundTexture} alt="" className="absolute inset-0 w-full h-full object-cover z-0" />
           )}
           {/* Top Section: Logo & Main Content */}
-          <div className="flex flex-col gap-12 lg:gap-16">
+          <div className="relative z-10 flex flex-col gap-12 lg:gap-16">
             <motion.div variants={itemVariants}>
               {logo && (
                 <div className="flex items-center gap-4">
