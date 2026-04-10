@@ -22,11 +22,11 @@ const PortfolioGrid = ({ items }: { items: PortfolioGridItem[] }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="flex flex-wrap justify-center gap-3">
         {items.map((item, index) => (
           <div
             key={index}
-            className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group"
+            className="relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group w-full sm:w-[calc(50%-6px)] lg:w-[calc(33.333%-8px)]"
             onClick={() => setLightboxIdx(index)}
           >
             <img
