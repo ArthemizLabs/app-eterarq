@@ -425,8 +425,7 @@ export default function Index() {
       <Navbar />
       <main className="md:ml-[220px] pt-16 md:pt-0">
         <Hero />
-        <FeaturedProjects />
-        <PortfolioMosaic />
+        <Projects />
         <About />
         <Method />
         <Quote />
