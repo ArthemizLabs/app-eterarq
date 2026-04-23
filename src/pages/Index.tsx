@@ -333,28 +333,93 @@ function Method() {
 }
 
 /* ═══════════════════════════════════════════
-   DEPOIMENTO — Citação única, editorial
+   DEPOIMENTOS — Grid editorial (Google Meu Negócio)
    ═══════════════════════════════════════════ */
+const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/UgH16PQWy2yUkneb9";
+
+const testimonials = [
+  {
+    text: "A empresa Cardio Diagnósticos gostaria de expressar seu sincero agradecimento à designer Fernanda e a toda a equipe de arquitetura pelo excelente trabalho realizado. O resultado final ficou realmente muito bom e atendeu às nossas expectativas! Destacamos especialmente a postura da empresa, que sempre esteve aberta a nos ouvir e respeitou muito nossas ideias e necessidades. Houve um cuidado constante em adequar o projeto aos custos da obra, sem perder qualidade e bom gosto.",
+    author: "Fernanda Vaz",
+    role: "Cardio Diagnósticos",
+  },
+  {
+    text: "A Éter fez o projeto do quarto da minha filha de 10 anos — e o resultado simplesmente superou todas as expectativas. A Fernanda conseguiu captar com sensibilidade o gosto, os sonhos e a personalidade da minha filha, transformando tudo isso em um espaço lindo, acolhedor, funcional e cheio de identidade. Foi emocionante ver o quanto minha filha se sentiu representada no próprio quarto.",
+    author: "Maisa Bueno Machado",
+    role: "Projeto Residencial",
+  },
+  {
+    text: "Incrível! Entregou mais do que o esperado e em um curto espaço de tempo. Recomendo! Fizeram a recepção do Lab Salus — podem conferir as fotos do antes e depois na galeria.",
+    author: "Rosana Pereira Morais",
+    role: "Laboratório Salus",
+  },
+];
+
 function Quote() {
   const { ref, visible } = useReveal();
   return (
-    <section ref={ref} className="bg-background py-32 sm:py-48 px-6 sm:px-12">
-      <div
-        className={`max-w-4xl mx-auto text-center transition-opacity duration-[1200ms] ${
-          visible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <p className="font-body text-[10px] tracking-[0.5em] uppercase text-muted-foreground mb-10">
-          Depoimento
-        </p>
-        <blockquote className="font-display tracking-display text-2xl sm:text-3xl md:text-4xl text-foreground leading-[1.3]">
-          "O novo espaço mudou completamente a percepção dos nossos clientes.
-          Fechamos <em className="font-detail">40% mais contratos</em> no primeiro
-          trimestre após a entrega."
-        </blockquote>
-        <p className="mt-12 font-body text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
-          Dr. Lucas Mendonça · Diretor de Clínica Médica
-        </p>
+    <section ref={ref} className="bg-background py-28 sm:py-40 px-6 sm:px-12">
+      <div className="max-w-6xl mx-auto">
+        <div
+          className={`text-center mb-20 transition-opacity duration-[1100ms] ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="font-body text-[10px] tracking-[0.5em] uppercase text-muted-foreground mb-6">
+            Depoimentos
+          </p>
+          <h2 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl text-foreground leading-[1.1]">
+            O que dizem sobre <em className="font-detail">nosso trabalho</em>.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
+          {testimonials.map((t, i) => (
+            <figure
+              key={t.author}
+              className={`flex flex-col border-t border-border pt-8 transition-opacity duration-[1100ms] ${
+                visible ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ transitionDelay: visible ? `${i * 180}ms` : "0ms" }}
+            >
+              <div
+                className="flex gap-1 mb-6 text-foreground"
+                aria-label="5 de 5 estrelas"
+              >
+                {Array.from({ length: 5 }).map((_, s) => (
+                  <span key={s} className="text-[13px] leading-none">★</span>
+                ))}
+              </div>
+              <blockquote className="font-body font-light text-[15px] text-muted-foreground leading-[1.8] flex-1">
+                "{t.text}"
+              </blockquote>
+              <figcaption className="mt-8">
+                <p className="font-display tracking-display text-lg text-foreground leading-tight">
+                  {t.author}
+                </p>
+                <p className="mt-2 font-body text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
+                  {t.role}
+                </p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div
+          className={`mt-16 sm:mt-20 flex justify-center transition-opacity duration-[1100ms] ${
+            visible ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ transitionDelay: visible ? "600ms" : "0ms" }}
+        >
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline font-body text-[11px] tracking-[0.4em] uppercase text-foreground inline-flex items-center gap-3"
+          >
+            Ver todas as avaliações no Google <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
