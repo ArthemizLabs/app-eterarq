@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logoEterSite from "@/assets/logo-eter-site.jpeg";
+import logoEterSiteDefault from "@/assets/logo-eter-site.jpeg";
+
+interface NavbarProps {
+  logoSrc?: string;
+}
 
 const NAV_LINKS = [
   { label: "Início", href: "#inicio" },
