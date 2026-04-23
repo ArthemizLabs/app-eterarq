@@ -6,7 +6,7 @@ import { PortfolioGrid } from "@/components/ui/portfolio-grid";
 
 import logoEterFooter from "@/assets/logo-eter-footer.png";
 import logoEterNovo from "@/assets/logo-eter-novo.png";
-import heroBg from "@/assets/hero-bg-site.jpg";
+import heroBg from "@/assets/hero-consultorio.jpg";
 import anaImg from "@/assets/ana-emilia.png";
 import fernandaImg from "@/assets/fernanda.png";
 import clinica1 from "@/assets/clinica-1.jpg";
@@ -107,7 +107,7 @@ function Hero() {
         transition={{ duration: 1.4 }}
         className="relative w-full h-[55vh] md:h-screen overflow-hidden order-1 md:order-2"
       >
-        <img src={heroBg} alt="Espaço projetado pela Éter" className="w-full h-full object-cover" />
+        <img src={heroBg} alt="Espaço projetado pela Éter" className="w-full h-full object-cover opacity-40" />
       </motion.div>
     </section>
   );
