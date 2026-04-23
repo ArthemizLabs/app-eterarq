@@ -41,7 +41,7 @@ export default function Navbar({ logoSrc }: NavbarProps = {}) {
       {/* Mobile top bar */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-40 bg-background/90 backdrop-blur-md border-b border-border h-16 flex items-center justify-between px-6">
         <a href="#inicio" onClick={() => scrollTo("#inicio")} className="flex items-center">
-          <img src={logoEterSite} alt="Éter Arquitetura e Design" className="h-9 w-auto rounded-sm" />
+          <img src={logoEterSite} alt="Éter Arquitetura e Design" className={`w-auto ${isCustom ? "h-10" : "h-9 rounded-sm"}`} />
         </a>
         <button
           onClick={() => setOpen(true)}
@@ -55,7 +55,7 @@ export default function Navbar({ logoSrc }: NavbarProps = {}) {
       {/* Desktop sidebar */}
       <aside className="hidden md:flex fixed top-0 left-0 bottom-0 z-40 w-[220px] bg-background border-r border-border flex-col justify-between py-10 px-8">
         <a href="#inicio" onClick={() => scrollTo("#inicio")} className="flex items-center">
-          <img src={logoEterSite} alt="Éter Arquitetura e Design" className="h-12 w-auto rounded-sm" />
+          <img src={logoEterSite} alt="Éter Arquitetura e Design" className={`w-auto ${isCustom ? "h-14" : "h-12 rounded-sm"}`} />
         </a>
 
         <nav className="flex flex-col gap-5">
@@ -99,7 +99,7 @@ export default function Navbar({ logoSrc }: NavbarProps = {}) {
           className="md:hidden fixed inset-0 z-50 bg-background flex flex-col p-8 animate-in fade-in duration-300"
         >
           <div className="flex items-center justify-between mb-16">
-            <img src={logoEterSite} alt="Éter Arquitetura e Design" className="h-10 w-auto rounded-sm" />
+            <img src={logoEterSite} alt="Éter Arquitetura e Design" className={`w-auto ${isCustom ? "h-11" : "h-10 rounded-sm"}`} />
             <button onClick={() => setOpen(false)} className="p-2" aria-label="Fechar menu">
               <X className="w-6 h-6 text-foreground" />
             </button>
