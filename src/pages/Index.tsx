@@ -59,7 +59,7 @@ function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="font-body text-[10px] tracking-[0.5em] uppercase text-muted-foreground"
         >
-          Estúdio · Goiânia, Brasil
+          Goiânia · Brasil
         </motion.p>
 
         <motion.div
