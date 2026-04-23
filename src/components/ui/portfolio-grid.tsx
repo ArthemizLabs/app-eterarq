@@ -9,7 +9,13 @@ export type PortfolioGridItem = {
   image: string;
 };
 
-const PortfolioGrid = ({ items }: { items: PortfolioGridItem[] }) => {
+const PortfolioGrid = ({
+  items,
+  dimmed = false,
+}: {
+  items: PortfolioGridItem[];
+  dimmed?: boolean;
+}) => {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
 
   const navigate = useCallback(
@@ -32,7 +38,11 @@ const PortfolioGrid = ({ items }: { items: PortfolioGridItem[] }) => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className={`w-full h-full object-cover transition-all duration-500 group-hover:scale-105 ${
+                dimmed
+                  ? "opacity-60 saturate-50 group-hover:opacity-100 group-hover:saturate-100"
+                  : ""
+              }`}
               loading="lazy"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
