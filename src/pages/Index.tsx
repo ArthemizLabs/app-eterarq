@@ -6,7 +6,8 @@ import { PortfolioGrid } from "@/components/ui/portfolio-grid";
 
 import logoEterFooter from "@/assets/logo-eter-footer.png";
 import heroBg from "@/assets/hero-bg-site.jpg";
-import sociasAboutImg from "@/assets/socias-about.jpeg";
+import anaImg from "@/assets/ana-emilia.png";
+import fernandaImg from "@/assets/fernanda.png";
 import clinica1 from "@/assets/clinica-1.jpg";
 import clinica2 from "@/assets/clinica-2.jpg";
 import clinica4 from "@/assets/clinica-4.jpg";
@@ -170,52 +171,85 @@ function Projects() {
    ═══════════════════════════════════════════ */
 function About() {
   const { ref, visible } = useReveal();
+  const socias = [
+    {
+      img: anaImg,
+      name: "Ana Emília Faleiro",
+      role: "Arquiteta",
+      bio: [
+        "Formada pela Universidade Estadual de Goiás e especialista em Design de Interiores, Decoração e Ambientação pela PUC-RS.",
+        "Responsável pela parte técnica dos projetos, compatibilização e soluções construtivas, assegurando eficiência, viabilidade e segurança na execução.",
+      ],
+    },
+    {
+      img: fernandaImg,
+      name: "Fernanda Castro",
+      role: "Designer de Interiores e Experiências",
+      bio: [
+        "Especialista em Produção de Ambientes por CASA VOGUE, Design de Experiências e Retail Design pelo Instituto Europeo di Design — IED São Paulo / Milão. Pós-graduada em Marketing e Comunicação ECA-USP (2008).",
+        "Atua no desenvolvimento e criação do conceito e identidade visual, garantindo que cada espaço seja singular e traduza a essência da sua marca.",
+      ],
+    },
+  ];
+
   return (
     <section id="sobre" ref={ref} className="bg-background py-28 sm:py-40 px-6 sm:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
-        <div
-          className={`md:col-span-7 transition-opacity duration-[1100ms] ${
-            visible ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <img
-            src={sociasAboutImg}
-            alt="Sócias — Éter Arquitetura e Design"
-            className="w-full h-[60vh] md:h-[85vh] object-cover"
-          />
-        </div>
-        <div
-          className={`md:col-span-5 transition-opacity duration-[1100ms] ${
-            visible ? "opacity-100" : "opacity-0"
-          }`}
-          style={{ transitionDelay: visible ? "250ms" : "0ms" }}
-        >
-          <p className="font-body text-[10px] tracking-[0.5em] uppercase text-muted-foreground mb-8">
-            Sobre
-          </p>
-          <h2 className="font-display tracking-display text-3xl sm:text-4xl md:text-5xl text-foreground leading-[1.1] mb-8">
-            Há mais de 7 anos transformando espaços comerciais em{" "}
-            <em className="font-detail">estratégia</em>.
-          </h2>
-          <p className="font-body font-light text-muted-foreground text-[15px] leading-[1.9] mb-6">
-            Com olhares complementares e uma abordagem técnica e sensível, a
-            Éter une estética e visão empresarial para projetar ambientes que
-            comunicam valor antes de qualquer palavra.
-          </p>
-          <p className="font-body font-light text-muted-foreground text-[15px] leading-[1.9] mb-10">
-            Especializadas em arquitetura comercial e corporativa, entendemos
-            que cada metro quadrado é uma oportunidade de posicionar sua marca
-            e potencializar seus resultados.
-          </p>
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-underline font-body text-[11px] tracking-[0.4em] uppercase text-foreground inline-flex items-center gap-3"
+      {/* Intro */}
+      <div
+        className={`max-w-4xl mx-auto text-center mb-20 sm:mb-28 transition-opacity duration-[1100ms] ${
+          visible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <p className="font-body text-[10px] tracking-[0.5em] uppercase text-muted-foreground mb-8">
+          Quem somos
+        </p>
+        <h2 className="font-display tracking-display text-2xl sm:text-3xl md:text-4xl text-foreground leading-[1.3] mb-10">
+          Éter, o elemento invisível que transforma espaço em{" "}
+          <em className="font-detail">atmosfera</em>, presença em{" "}
+          <em className="font-detail">conexão</em>, forma em{" "}
+          <em className="font-detail">essência</em>.
+        </h2>
+        <p className="font-body font-light text-muted-foreground text-[15px] leading-[1.9] max-w-2xl mx-auto">
+          Éter nasce da união de olhares complementares e de uma abordagem
+          criativa, sensível e técnica sobre o espaço.
+        </p>
+      </div>
+
+      {/* Sócias */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-12 max-w-7xl mx-auto">
+        {socias.map((s, i) => (
+          <div
+            key={s.name}
+            className={`grid grid-cols-1 sm:grid-cols-5 gap-6 sm:gap-8 transition-opacity duration-[1100ms] ${
+              visible ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ transitionDelay: visible ? `${i * 200}ms` : "0ms" }}
           >
-            Leia mais <ArrowRight className="w-4 h-4" />
-          </a>
-        </div>
+            <div className="sm:col-span-2">
+              <img
+                src={s.img}
+                alt={`${s.name} — ${s.role}`}
+                className="w-full aspect-[3/4] object-cover"
+              />
+            </div>
+            <div className="sm:col-span-3 flex flex-col justify-center">
+              <h3 className="font-display tracking-display text-2xl text-foreground leading-tight mb-2">
+                {s.name}
+              </h3>
+              <p className="font-body text-[10px] tracking-[0.4em] uppercase text-muted-foreground mb-6">
+                {s.role}
+              </p>
+              {s.bio.map((p, j) => (
+                <p
+                  key={j}
+                  className="font-body font-light text-[14px] text-muted-foreground leading-[1.9] mb-4 last:mb-0"
+                >
+                  {p}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
